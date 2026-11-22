@@ -1,0 +1,17 @@
+{
+  "name": "tripmazer",
+  "owner": {
+    "name": "TripMazer",
+    "url": "https://tripmazer.com/developers"
+  },
+  "plugins": [
+    {
+      "name": "mazer-builder",
+      "source": "./mazer-builder",
+      "description": "Build travel apps with the Mazer API: its jobs as tools, and skills for integrating them."
+    }
+  ],
+  "metadata": {
+    "description": "Plugins for building travel apps with the Mazer API."
+  }
+}

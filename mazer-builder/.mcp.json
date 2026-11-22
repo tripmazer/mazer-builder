@@ -1,0 +1,5 @@
+{
+  "mcpServers": {
+    "mazer": { "type": "http", "url": "https://mcp.tripmazer.com/mcp" }
+  }
+}
