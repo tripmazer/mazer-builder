@@ -1,9 +1,10 @@
 {
   "name": "mazer-builder",
   "displayName": "Mazer Builder",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Build travel apps with the Mazer API: skills for calling its jobs, verifying webhooks and moving off Amadeus Self-Service, with the Mazer connector's tools.",
   "author": { "name": "TripMazer", "url": "https://tripmazer.com/developers" },
+  "repository": "https://github.com/tripmazer/mazer-builder",
   "homepage": "https://docs.tripmazer.com/api",
   "documentationUrl": "https://docs.tripmazer.com/api/mcp",
   "supportUrl": "https://tripmazer.com/contact",

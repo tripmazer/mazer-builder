@@ -22,12 +22,12 @@ Base address: `https://wiunqzjefneakwtlbgpp.supabase.co/functions/v1/agent-api`.
 ```js
 const BASE = "https://wiunqzjefneakwtlbgpp.supabase.co/functions/v1/agent-api";
 
-// apiKey: your app's Mazer API key, from its own secret store.
-export async function startJob(apiKey, kind, input, idempotencyKey) {
+// YOUR_API_KEY is a placeholder: load the app's key from its own secret store.
+export async function startJob(kind, input, idempotencyKey) {
   const res = await fetch(`${BASE}/v1/jobs`, {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${apiKey}`,
+      Authorization: "Bearer YOUR_API_KEY",
       "Content-Type": "application/json",
       "Idempotency-Key": idempotencyKey,
     },
