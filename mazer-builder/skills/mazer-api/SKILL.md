@@ -9,7 +9,7 @@ One POST starts a job. Mazer does the work on its side. The result comes back in
 
 ## Rules
 
-- Keep the key on a server. Never put `tm_live_` or `tm_test_` in browser or mobile code, a repository or a log. Read it from the environment.
+- Keep the key on a server. Never put `tm_live_` or `tm_test_` in browser or mobile code, a repository or a log. The app loads it from wherever it keeps its own secrets.
 - Build against a **test** key first. Test jobs finish at once with sample results and never charge. Same address, same shapes.
 - Send an `Idempotency-Key` on every POST that starts a job, made from something stable in your own data (a booking id), so a retry can't start a second job.
 - Never invent a job, a field or a price. Read `GET /v1/openapi.json` (no key needed) for shapes and `GET /v1/prices` for prices.
@@ -22,11 +22,12 @@ Base address: `https://wiunqzjefneakwtlbgpp.supabase.co/functions/v1/agent-api`.
 ```js
 const BASE = "https://wiunqzjefneakwtlbgpp.supabase.co/functions/v1/agent-api";
 
-export async function startJob(kind, input, idempotencyKey) {
+// apiKey: your app's Mazer API key, from its own secret store.
+export async function startJob(apiKey, kind, input, idempotencyKey) {
   const res = await fetch(`${BASE}/v1/jobs`, {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${process.env.TRIPMAZER_KEY}`,
+      Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
       "Idempotency-Key": idempotencyKey,
     },

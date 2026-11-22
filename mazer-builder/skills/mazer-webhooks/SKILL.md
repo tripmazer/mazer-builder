@@ -5,7 +5,7 @@ description: Receive Mazer API webhooks (job.succeeded, job.failed, flight.lande
 
 # Mazer webhooks
 
-Add the endpoint in the developer console under Webhooks. Its signing secret is shown once; keep it in the environment (`TRIPMAZER_WEBHOOK_SECRET`).
+Add the endpoint in the developer console under Webhooks. Its signing secret is shown once; keep it with the app's other secrets and pass it to `verify`.
 
 ## Verify first, on the raw body
 
