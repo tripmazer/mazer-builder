@@ -8,7 +8,7 @@
     {
       "name": "mazer-builder",
       "source": "./mazer-builder",
-      "description": "Build travel apps with the Mazer API: its jobs as tools, and skills for integrating them."
+      "description": "Build travel apps with the Mazer API: skills for calling its jobs, with the Mazer connector's tools."
     }
   ],
   "metadata": {
