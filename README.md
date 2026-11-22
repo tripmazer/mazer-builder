@@ -27,7 +27,7 @@ The first time you use a tool, you sign in to TripMazer in your browser, choose 
 
 ## What it runs and sends
 
-The plugin runs no scripts and no hooks, and reads no credentials from your machine. The skills are text. The connector receives only the inputs of the tools Claude calls, at `mcp.tripmazer.com`; it doesn't see your code or the rest of the conversation. Live jobs use your TripMazer account's prepaid credit, up to the daily limit you chose when you connected, and are charged only when they finish. Check on me messages only people who opted in through their own link.
+The plugin runs no scripts and no hooks, and reads no credentials from your machine. The skills are text; the code they help you write calls the Mazer API, also run by TripMazer, at `https://wiunqzjefneakwtlbgpp.supabase.co/functions/v1/agent-api`, with the key you give your app. The connector receives only the inputs of the tools Claude calls, at `mcp.tripmazer.com`; it doesn't see your code or the rest of the conversation. Live jobs use your TripMazer account's prepaid credit, up to the daily limit you chose when you connected, and are charged only when they finish. Check on me messages only people who opted in through their own link.
 
 How long results are kept is in the [privacy policy](https://tripmazer.com/legal/privacy). Disconnect any time in the [developer console](https://tripmazer.com/developers/console/keys), under Connected apps.
 
